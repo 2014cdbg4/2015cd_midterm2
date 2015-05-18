@@ -173,7 +173,7 @@ class Hello(object):
     #@+node:2015.20150330144929.1713: *3* twoDgear
     @cherrypy.expose
     # N 為齒數, M 為模數, P 為壓力角
-    def index(self, N=None, M=None, P=None):
+    def twoDgear(self, N=20, M=5, P=15):
         outstring = '''
     <!DOCTYPE html> 
     <html>
@@ -187,62 +187,11 @@ class Hello(object):
     <!-- 啟動 brython() -->
     <body onload="brython()">
         
-    <form method=POST action=mygeartest>
-    <p>學號:40123207
-    <p>齒數1:
-    <p><select name=N1>
-    <option>10
-    <option>20
-    <option>30
-    <option>40
-    <option>50
-
-    </select>
-    <p>齒數2:
-    <p><select name=N2>
-    <option>10
-    <option>20
-    <option>30
-    <option>40
-    <option>50
-
-    </select>
-    <p>模數:
-    <p><select name=M>
-
-    <option>2
-    <option>3
-    <option>4
-    <option>5
-    <option>6
-    <option>7
-    <option>8
-    <option>9
-    <option>10
-
-
-
-    </select>
-    <p>壓力角:
-    <p><select name=P>
-    <option>14.5
-    <option>15.0
-    <option>15.5
-    <option>16.0
-    <option>16.5
-    <option>17.0
-    <option>17.5
-    <option>18.0
-    <option>18.5
-    <option>19.0
-    <option>19.5
-    <option>20.0
-
-
-    </select>
-    </br>
-
-    <p><input type=submit value=send>
+    <form method=POST action=do2Dgear>
+    齒數:<input type=text name=N><br />
+    模數:<input type=text name=M><br />
+    壓力角:<input type=text name=P><br />
+    <input type=submit value=send>
     </form>
     </body>
     </html>
